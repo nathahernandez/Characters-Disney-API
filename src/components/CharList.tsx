@@ -2,10 +2,18 @@ import CharItem from './CharItem'
 import { useEffect, useState } from 'react';
 import Api from '../api/Api'
 
+interface charGet {
+    _id: number,
+    name: string,
+    tvShows: string,
+    imageUrl: string,
+    films: string
+}
+
 export function CharList() {
 
-    const [char, setChar] = useState([]);
-    const [page, setPage] = useState(1);
+    const [char, setChar] = useState <charGet[]> ([]);
+    const [page, setPage] = useState <Number> (1);
     
     useEffect( () => {
         let init = '/characters?page=' + page.toString();
@@ -39,7 +47,7 @@ export function CharList() {
             <button onClick={pageNext}>Next</button>
         </div>
         <ul>
-            { char.map(e => <CharItem key={e._id} char={e} />)  }
+            { char.map((e: charGet) => <CharItem key={e._id} char={e} />)  }
         </ul>
     </section>
 

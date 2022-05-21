@@ -1,4 +1,13 @@
-export default function CharItem(props){
+interface CharItemProps {
+  char:{
+    name: string,
+    tvShows: string,
+    imageUrl: string,
+    films: string
+  }
+}
+
+export default function CharItem(props: CharItemProps){
   return (
     <li>
        <strong>{props.char.name}</strong>
