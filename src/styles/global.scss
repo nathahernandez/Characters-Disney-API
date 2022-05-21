@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #BFF5FD;
+}
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+section.char-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    width: 20%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    color: #113CCF;
+    border-radius: 200px;
+    transition: width 3s; 
+}
+h1:hover{
+    width: 40%;
+    transition: width 3s; 
+}
+.btn-box{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    button{
+        margin: 10px;
+        padding: 15px;
+        border: none;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 20px;
+        color: #113CCF;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    button:hover{
+        background-color: #113CCF;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        transition: all .5s;
+    }
+}
+ul{
+    display: grid;
+    grid-template: auto auto auto auto auto / auto auto auto auto auto;
+    list-style: none;
+    li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        padding: 25px;
+        width: 300px;
+        height: 250px;
+        & + li {
+            margin-top: 35px;
+        }
+        p{
+            font-size: 14px;
+            margin: 20px;
+        }
+       
+        img{
+            border-radius: 40px;
+            max-width: 150px;
+            max-height: 150px;
+        }
+    }
+    li:hover{
+        border-radius: 40px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: #FFFFFF;
+        transition: box-shadow .1s, background-color .5s;
+        strong{
+            background-color: #FFFFFF;
+            width: 100%;
+            text-align: center;
+            color: #113CCF;
+            border-radius: 10px;
+            transition: padding-left 1s, background-color .5s, padding-right 1s, border-radius 2s;
+        }
+        p{
+            background-color: #FFFFFF;
+            color: #113CCF;
+            transition: background-color .5s;
+        }
+        cursor: pointer;
+    }
+}
