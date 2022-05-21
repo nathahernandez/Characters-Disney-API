@@ -39,7 +39,7 @@ export function CharList() {
             <button onClick={pageNext}>Next</button>
         </div>
         <ul>
-            { char.map(e => <CharItem char={e} />)  }
+            { char.map(e => <CharItem key={e._id} char={e} />)  }
         </ul>
     </section>
 
